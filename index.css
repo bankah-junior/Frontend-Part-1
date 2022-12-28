@@ -1,0 +1,147 @@
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: /*#f09819*/ #a30000;
+}
+
+#toggle-btn, 
+.menu a {
+	position: absolute;
+	display: block;
+	display: -ms-grid;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+}
+
+#toggle-btn {
+	background-color: #004777;
+	width: 100px;
+	height: 100px;
+	top: 15px;
+	left: 15px;
+	color: #fff;
+	font-size: 40px;
+	border: none;
+	cursor: pointer;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+
+#toggle-btn img:hover {
+	animation: scaler 2s infinite alternate ease-out;
+}
+
+@keyframes scaler {
+	0% {
+		transform: scale(1.0);
+	}
+
+	100% {
+		transform: scale(0.5);
+	}
+}
+
+.menu a {
+	background-color: #efd25d;
+	height: 70px;
+	width: 70px;
+	top: 30px;
+	left: 30px;
+	font-size: 22px;
+	color: #4249ed;
+	text-decoration: none;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.menu a:hover {
+	width: 80px;
+	height: 80px;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	background-color: rgba(0, 0, 0, .7);
+	border: #ff7700 solid 3px;
+	box-shadow: 0 0 5px #ff7700, 0 0 15px #ff7700, 0 0 50px #ff7700;
+	animation: blink 3s linear infinite;
+}
+
+@keyframes blink {
+	50% {
+	border: transparent; solid 0;
+	box-shadow: 0 0 5px transparent, 0 0 15px transparent, 0 0 50px transparent;
+	}
+}
+
+.menu a:hover img {
+	filter: invert(100%);
+}
+
+.menu a:hover.user:after {
+	content: "User";
+	font-family: Verdana;
+	font-size: .6rem;
+	font-weight: 400;
+	color: #fff;
+	transform: translateY(-10px);
+}
+
+.menu a:hover.info:after {
+	content: "Info";
+	font-family: Verdana;
+	font-size: .6rem;
+	font-weight: 400;
+	color: #fff;
+	transform: translateY(-10px);
+}
+
+.menu a:hover.comments:after {
+	content: "Comment";
+	font-family: Verdana;
+	font-size: .6rem;
+	font-weight: 400;
+	color: #fff;
+	transform: translateY(-10px);
+}
+
+.menu a:hover.phone:after {
+	content: "Contact";
+	font-family: Verdana;
+	font-size: .6rem;
+	font-weight: 400;
+	color: #fff;
+	transform: translateY(-10px);
+}
+
+.active {
+	-webkit-transition: rotate(45deg);
+	-ms-transition: rotate(45deg);
+	transition: rotate(45deg);
+}
+
+#insta-link {
+	background-color: #efd25d;
+	color: #0f1730;
+	position: absolute;
+	display: block;
+	margin: auto;
+	left: 0;
+	left: 0;
+	bottom: 30px;
+	padding: 15px 0;
+	border-radius: 5px;
+	width: 320px;
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+}
