@@ -1,0 +1,172 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Radio Canada', sans-serif;
+}
+
+body {
+	background-color: #383838;
+}
+
+section {
+	width: 100%;
+	height: 70vh;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	top: 20%;
+	align-items: center;
+}
+
+aside.card {
+	background-color: #fafafa;
+	width: 280px;
+	height: 350px;
+	padding: 20px;
+	border-radius: 5px;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-flow: column;
+}
+
+aside.card h1 {
+	font-size: 24px;
+	font-weight: 500;
+	color: #101010;
+}
+
+aside.card p {
+	font-size: 18px;
+	color: #383838;
+}
+
+aside.card .clip {
+	position: absolute;
+	background-color: #ff0c9a;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	clip-path: circle(15% at 105% 47.5%);
+	transition: 0.5s all ease-in-out;
+}
+
+aside.card .clip h2 {
+	color: #fafafa;
+	font-size: 22px;
+	font-weight: 500;
+}
+
+aside.card .clip p {
+	color: #f1f1f1;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+aside.card .clip .arrow {
+	position: absolute;
+	right: 2px;
+	top: cal(50% - 20px);
+	visibility: visible;
+	opacity: 1;
+	transition: 0.2s all ease-in-out;
+}
+
+aside.card .clip img {
+	width: 200px;
+}
+
+aside.card:hover .clip {
+	clip-path: circle(150% at 105% 47.5%);
+}
+
+aside.card:hover .clip .arrow {
+	visibility: hidden;
+	opacity: 0;
+}
+
+/* CARD 2 */
+
+.card1 {
+	height: 350px;
+	width: 290px;
+	margin-left: 1rem;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	border-radius: 20px;
+}
+
+.card1 img {
+	height: 100%;
+	width: 100%;
+}
+
+.card1:hover .details {
+	opacity: 1;
+	height: 100%;
+	color: #fff;
+}
+
+.details {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	bottom: 0;
+	width: 100%;
+	height: 0%;
+	background: rgba(0, 0, 0, .7);
+	opacity: 0;
+	transition: 0.5s ease;
+}
+
+.details h3 {
+	font-size: 30px;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.details p {
+	margin: 2px 0;
+	font-size: 15px;
+	font-style: italic;
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+.social-icons li {
+	margin: 5px 10px;
+}
+
+.social-icons li a {
+	color: #75e44f;
+}
+
+.social-icons li a i img {
+	width: 25px;
+	height: 25px;
+	filter: invert(100%);
+}
+
+@media (max-width: 40em) {
+	section {
+		flex-direction: column;
+		justify-content: space-around;
+		height: 190vh;
+		top:35%;
+		z-index: -99;
+	}
+}
