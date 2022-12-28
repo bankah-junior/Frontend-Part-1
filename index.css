@@ -1,0 +1,27 @@
+header, footer {
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.w3-card {
+    width: 450px;
+    margin-top: 5rem;
+}
+
+header, footer {
+    margin: 1.5rem 0;
+}
+
+form {
+    transform: translateX(15px);
+}
+
+input {
+    background-color: transparent;
+    color: #fff;
+}
